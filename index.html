@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Menggunakan QR Pengembalian</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#edf3fa;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.header{
+    background:#0d47a1;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+.logo{
+    width:90px;
+    margin-bottom:10px;
+}
+
+.header h1{
+    font-size:38px;
+    font-weight:bold;
+}
+
+.header h2{
+    margin-top:8px;
+    font-size:22px;
+    color:#ffe082;
+}
+
+.banner{
+    width:100%;
+    display:block;
+}
+
+.qr-section{
+    text-align:center;
+    padding:25px;
+    background:#f5f8fc;
+}
+
+/* CSS UNTUK TIMER */
+.timer-container{
+    display:inline-block;
+    background:#0d47a1;
+    color:#fff;
+    padding:15px 30px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.timer-label{
+    font-size:16px;
+    color:#ffe082;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+#countdown{
+    font-size:40px;
+    font-weight:bold;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#countdown.expired{
+    color:#ff5252;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+/* AKHIR CSS TIMER */
+
+.qr-section img{
+    width:280px;
+    max-width:90%;
+    border-radius:15px;
+    border:5px solid #0d47a1;
+    padding:10px;
+    background:#fff;
+}
+
+.qr-section h3{
+    margin-top:20px;
+    font-size:28px;
+    color:#0d47a1;
+}
+
+.steps{
+    padding:25px;
+}
+
+.step{
+    display:flex;
+    gap:20px;
+    margin-bottom:18px;
+    background:#fff;
+    border-left:8px solid #1565c0;
+    padding:18px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.number{
+    width:50px;
+    height:50px;
+    background:#1565c0;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.content{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.option{
+    margin-top:8px;
+    margin-left:20px;
+}
+
+.footer{
+    background:#0d47a1;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+.footer h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.footer p{
+    font-size:20px;
+}
+
+@media(max-width:700px){
+
+.header h1{
+    font-size:30px;
+}
+
+.step{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.number{
+    margin-bottom:10px;
+}
+
+.content{
+    font-size:16px;
+}
+
+#countdown{
+    font-size:32px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<img src="logo.png" class="logo">
+
+<h1>CARA MENGGUNAKAN</h1>
+<h2>QR PENGEMBALIAN</h2>
+
+</div>
+
+<img src="banner.png" class="banner">
+
+<div class="qr-section">
+
+<!-- ELEMEN TIMER -->
+<div class="timer-container">
+    <div class="timer-label">Waktu Tersisa</div>
+    <div id="countdown">02:00</div>
+</div>
+
+<img src="qris.png">
+
+<h3>SCAN QR CODE PENGEMBALIAN</h3>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<div class="content">
+Buka aplikasi <b>Mobile Banking / E-Wallet</b> yang digunakan saat melakukan pembayaran yang akan direfund.
+</div>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<div class="content">
+Scan <b>QR Code Pengembalian</b>.
+</div>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<div class="content">
+Akan muncul <b>Kode Unik Pengembalian</b>.
+</div>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<div class="content">
+Klik <b>Lanjutkan</b>, kemudian masukkan Password / PIN.
+</div>
+</div>
+
+<div class="step">
+<div class="number">5</div>
+<div class="content">
+Akan muncul dua pilihan:
+<div class="option">
+• Pembayaran Ulang / Registrasi<br>
+• Refund Pembayaran / Pengembalian
+</div>
+</div>
+</div>
+
+<div class="step">
+<div class="number">6</div>
+<div class="content">
+Pilih <b>Refund / Pengembalian</b>, kemudian masukkan nominal yang akan direfund.
+</div>
+</div>
+
+<div class="step">
+<div class="number">7</div>
+<div class="content">
+Klik <b>OK</b>, lalu tunggu proses sistem selama kurang lebih <b>3 menit</b>.
+</div>
+</div>
+
+<div class="step">
+<div class="number">8</div>
+<div class="content">
+Refresh atau tutup lalu buka kembali aplikasi Mobile Banking / E-Wallet.
+</div>
+</div>
+
+<div class="step">
+<div class="number">9</div>
+<div class="content">
+Cek saldo Anda. Jika saldo telah bertambah, berarti proses <b>Refund/Pengembalian berhasil.</b><br><br>
+
+🎉 <b>Selamat! Dana telah berhasil dikembalikan.</b>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+
+<h2>TERIMA KASIH</h2>
+
+<p>Transaksi Aman • Mudah • Cepat • Terpercaya</p>
+
+</div>
+
+</div>
+
+<!-- SCRIPT JAVASCRIPT UNTUK TIMER -->
+<script>
+    // Set waktu awal (2 menit = 120 detik)
+    let timeLeft = 120; 
+    const countdownElement = document.getElementById('countdown');
+
+    // Fungsi untuk memperbarui tampilan timer
+    function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        // Format menjadi 00:00
+        const formattedTime = 
+            String(minutes).padStart(2, '0') + ":" + 
+            String(seconds).padStart(2, '0');
+
+        countdownElement.textContent = formattedTime;
+    }
+
+    // Jalankan timer secara berulang setiap 1 detik (1000 ms)
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        updateTimer();
+
+        // Jika waktu sudah habis (0)
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval); // Hentikan interval
+            countdownElement.classList.add('expired'); // Tambahkan class merah berkedip
+            countdownElement.textContent = "WAKTU HABIS";
+        }
+    }, 1000);
+
+    // Panggil sekali saat halaman dimuat agar tidak ada delay 1 detik pertama
+    updateTimer();
+</script>
+
+</body>
+</html>
